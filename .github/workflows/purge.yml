@@ -1,0 +1,35 @@
+name: temp-purge
+on:
+  schedule:
+    - cron: '33 3 * * *'
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  purge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Purge transient dirs (keep .keep)
+        run: |
+          set -euo pipefail
+          for d in INBOX DRAFTS ARTIFACTS; do
+            if [ -d "RECEIPTS" ]; then
+              find "RECEIPTS" -type f ! -name ".keep" -delete
+              find "RECEIPTS" -type d -empty -delete || true
+              # re-create keep if removed
+              if [ ! -f "RECEIPTS/.keep" ]; then echo ".keep" > "RECEIPTS/.keep"; fi
+            fi
+          done
+      - name: Commit if changed
+        run: |
+          set -euo pipefail
+          if git diff --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "temp-purge-bot"
+          git config user.email "temp-purge-bot@users.noreply.github.com"
+          git add -A
+          git commit -m "TEMP: daily purge"
+          git push
