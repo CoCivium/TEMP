@@ -2,7 +2,7 @@
 
 This repo is intentionally **ephemeral**. Treat it as a transient inbox / scratchpad.
 
-**If this repo is Public (it is right now), do NOT place IP-sensitive material here.**
+**If this repo is Public, do NOT place IP-sensitive material here.**
 Allowed: process notes, sanitized checklists, non-sensitive scripts, and pointers.
 
 ## How to use
@@ -13,5 +13,7 @@ Allowed: process notes, sanitized checklists, non-sensitive scripts, and pointer
   - sha256.txt for key files
 
 ## Purge policy
-A scheduled workflow wipes INBOX/, DRAFTS/, and ARTIFACTS/ back to .keep daily.
+Preferred: scheduled workflow wipes INBOX/, DRAFTS/, ARTIFACTS/ daily.
+Fallback: manual purge until workflow-scope auth is available (current).
 Anything worth keeping must be copied out to a real repo/vault by CoPrime.
+

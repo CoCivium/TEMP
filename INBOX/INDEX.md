@@ -3,7 +3,7 @@
 Append-only index of active nuggets.
 
 Format:
-- <UTC> | <slug> | purpose | link | sha256
+- <UTC> | <slug> | purpose | URL_RAW | sha256
 
 CoPrime workflow:
 1) skim this file
