@@ -1,0 +1,1 @@
+<# # SideNote | FROM=Focus | TO=4.0|PRIME|260125 | UTC=20260128T020535Z | STATE=doing | INTENT=See TEMP nugget README; request MasterPlan URL_RAW + MVP stop-rule + WIP cap; pointers included. END #>
