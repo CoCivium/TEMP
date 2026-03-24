@@ -1,0 +1,6 @@
+REPO=CoCivium/TEMP
+BRANCH=main
+PATH_BOOTSTRAP=docs/cluster/bootstrap/
+PATH_RECEIPTS=docs/cluster/receipts/
+NOTE=Temporary writable rail for current CoCivium connector.
+NEXT=Land latest bootstrap pointer, latest receipt pointer, latest policy pointer, latest handoff pointer.
