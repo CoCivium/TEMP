@@ -1,0 +1,5 @@
+SESSION=CoUS.4.260322b.CoStacks
+STATE=HOLD
+TARGET=CoBusNet bootstrap alignment
+WRITE_RAIL=CoCivium/TEMP
+NEXT=publish latest pointer index or switch writable connector
