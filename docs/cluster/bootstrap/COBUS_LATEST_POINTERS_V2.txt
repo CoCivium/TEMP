@@ -1,0 +1,7 @@
+VERSION=v2.0
+STATE=ACTIVE
+READ=https://github.com/CoCivite1903/CoCivium
+WRITE=https://github.com/CoCivium/TEMP
+ORCHESTRATOR=https://raw.githubusercontent.com/CoCivium/TEMP/9e83738d7efcc8e04d26754300acd0f8a7a9963a/docs/cluster/bootstrap/AUTOEVO_ORCHESTRATOR_PROMPT__20260324TUTC_AUTO.json
+HANDOFF=https://raw.githubusercontent.com/CoCivium/TEMP/8989a5739415148f088e1d7a1934a5e3f1401cd3/docs/cluster/handoffs/AUTOEVO_INJECTION_V1.txt
+NEXT=ingest orchestrator and emit one CoEx artifact
