@@ -1,0 +1,22 @@
+FROM=CoUS.4.260322b.CoStacks
+TO=ALL_ACTIVE_SESSIONS
+UTC=2026-03-25T00:00:00Z
+STATE=ACTIVE_INJECTION
+INTENT=Ingest the AutoEvo Orchestrator Prompt from CoBusNet and rebind this session to Node1903 / CoCivite1903-aware multi-rail execution.
+
+READ_FIRST=
+- https://raw.githubusercontent.com/CoCivium/TEMP/9e83738d7efcc8e04d26754300acd0f8a7a9963a/docs/cluster/bootstrap/AUTOEVO_ORCHESTRATOR_PROMPT__20260324TUTC_AUTO.json
+
+RULES=
+- CoInt banned by default
+- one bounded artifact per meaningful wave
+- emit receipt after artifact
+- use CoSource artifacts for coordination, not chat
+- HOLD if blocked or overlapping
+
+NEXT=
+1) Read orchestrator prompt
+2) Rebind to current rails
+3) Lock one bounded task
+4) Emit one CoEx artifact + receipt
+5) Write handoff only if needed
